@@ -1,0 +1,140 @@
+.chart {
+
+}
+
+.ganttChart {
+  padding: 1rem;
+  height: 90vh;
+
+  .ganttChartArea {
+    width: 100%;
+    height: 90vh;
+    background: white;
+    box-sizing: border-box;
+    padding-left: 2rem;
+    position: relative;
+
+    .header {
+      h3 {
+        color: gray;
+        font-weight: bold;
+        padding-right: 1rem;
+      }
+    }
+
+    .toolBox {
+      position: absolute;
+      top: 2rem;
+      width: 100%;
+      height: 3rem;
+      box-sizing: border-box;
+      padding: 0 5rem 1rem 5rem;
+      display: flex;
+      justify-content: space-between;
+      z-index: 2;
+
+      .toolGroup {
+        flex-basis: 28rem;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      span.title {
+        color: gray;
+      }
+    }
+
+  }
+
+  .analysis {
+    height: 90vh;
+
+    h3 {
+      color: gray;
+    }
+
+    .history {
+      height: 72%;
+      box-sizing: border-box;
+      padding: 2rem 0 0 1rem;
+      overflow: hidden;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2rem;
+        bottom: 0;
+        background: linear-gradient(to top, white, transparent);
+        z-index: 10;
+      }
+    }
+  }
+}
+
+.create {
+  box-sizing: border-box;
+  padding: 1rem;
+
+  thead {
+    th {
+      background: white;
+      color: #1b1b1e;
+      font-weight: bold;
+      font-size: 1rem;
+      border: none;
+    }
+
+    tr {
+      border: none;
+    }
+  }
+
+  tbody {
+    border: none;
+
+    tr {
+      border: none;
+
+      td {
+        border: none;
+      }
+    }
+  }
+
+  .title {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem 0 0;
+    box-sizing: border-box;
+
+    div:last-child {
+      width: 10rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.columnSearch {
+  padding: .5rem;
+  box-shadow: 1px 1px 1rem rgba(0, 0, 0, .34);
+  border-radius: 3px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: .8rem;
+    height: .8rem;
+    top: -.4rem;
+    right: 45%;
+    background: white;
+    transform: rotate(45deg);
+    box-shadow: -3px -3px 3px rgba(0, 0, 0, .1)
+  }
+}

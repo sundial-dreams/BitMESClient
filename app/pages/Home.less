@@ -1,0 +1,126 @@
+.home {
+  height: 100%;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+}
+
+@up-block-height: 45vh;
+.machineState {
+  width: 30rem;
+  height: @up-block-height;
+  padding: 1rem;
+
+  .header {
+    height: 7%;
+  }
+
+  .center {
+    display: flex;
+
+    .left {
+      width: 59%;
+      text-align: center;
+      flex: 1.5;
+    }
+
+    .state {
+      flex: 1;
+      width: 40%;
+      height: 50%;
+      margin-top: 7rem;
+
+      .legend {
+        color: gray;
+        width: 100%;
+        margin-bottom: 0.5rem;
+
+        span {
+          display: inline-block;
+          width: 1rem;
+          height: 1rem;
+          background: deepskyblue;
+          margin-right: 0.2rem;
+        }
+
+        em {
+          float: right;
+          color: deepskyblue;
+          font-weight: bold;
+          font-style: normal;
+        }
+      }
+    }
+  }
+
+  h3 {
+    display: inline-block;
+    color: gray;
+    font-weight: bold;
+  }
+}
+
+.processProgress {
+  height: @up-block-height;
+  padding: 1rem;
+
+  h3 {
+    color: gray;
+    font-weight: bold;
+  }
+
+  .header {
+    height: 50%;
+  }
+
+  .footer {
+    padding: 1rem .5rem 0 .5rem;
+    height: 50%;
+  }
+}
+.works {
+  height: @up-block-height;
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    height: 2rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    background: linear-gradient(to top, white, transparent);
+  }
+  .header {
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  p {
+    font-size: .9rem;
+  }
+  h3 {
+    color: gray;
+    font-weight: bold;
+  }
+
+}
+@under-block-height: 45vh;
+.machineWorkChart {
+  height: @under-block-height;
+  padding: 1rem;
+  h3 {
+    font-weight: bold;
+    color: gray;
+  }
+}
+.produceModuleChart {
+  padding: 1rem;
+  height: @under-block-height;
+  h3 {
+    font-weight: bold;
+    color: gray;
+  }
+}

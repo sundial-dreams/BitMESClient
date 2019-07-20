@@ -1,0 +1,134 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~antd/dist/antd.css';
+
+
+::-webkit-scrollbar {
+    background-color: transparent !important;
+    width: 3px !important;
+    height: 3px !important;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #1b1b1e !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1b1b1e !important;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent !important;
+}
+
+::selection {
+    background-color: #1b1b1e !important;
+    color: #fff !important;
+    text-shadow: none !important;
+}
+* {
+    user-select: none;
+}
+html {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: white;
+
+}
+
+body {
+    position: relative;
+    color: white;
+    height: 100vh;
+    background-color: white;
+    font-family: Consolas, Arial, Helvetica, Helvetica Neue, serif;
+    overflow: hidden;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2.25rem;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+    color: #fff;
+}
+
+p {
+    font-size: 24px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    opacity: 0.75;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../resources/fonts/icomoon.eot?f4uh9j');
+    src: url('../resources/fonts/icomoon.eot?f4uh9j#iefix') format('embedded-opentype'),
+    url('../resources/fonts/icomoon.ttf?f4uh9j') format('truetype'),
+    url('../resources/fonts/icomoon.woff?f4uh9j') format('woff'),
+    url('../resources/fonts/icomoon.svg?f4uh9j#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-report:before {
+    content: "\e900";
+}
+
+.icon-chart:before {
+    content: "\e901";
+}
+
+.icon-more:before {
+    content: "\e902";
+}
+
+.icon-home:before {
+    content: "\e903";
+}
+
+@keyframes display {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#__page {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation: .4s display ease-in-out both;
+    overflow: hidden;
+}

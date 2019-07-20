@@ -1,0 +1,84 @@
+@app-menu-width: 4rem;
+.menu {
+  margin: 6rem auto 0 auto;
+  width: 100%;
+  transition: .5s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .menuItem {
+    height: @app-menu-width;
+    width: 100%;
+    text-align: center;
+    border: none;
+    background: transparent;
+    transition: .4s;
+    font-size: 1.4rem;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #969696;
+    outline: none;
+
+
+    &:hover, &.active {
+      background: #232c39;
+    }
+
+    &.home {
+      &:hover, &.active {
+        color: dodgerblue;
+      }
+
+      .rightBar {
+        background: dodgerblue;
+      }
+    }
+
+    &.more {
+      &:hover, &.active {
+        color: sandybrown;
+      }
+
+      .rightBar {
+        background: sandybrown;
+      }
+    }
+
+    &.chart {
+      &:hover, &.active {
+        color: darkviolet;
+      }
+
+      .rightBar {
+        background: darkviolet;
+      }
+    }
+
+    &.report {
+      &:hover, &.active {
+        color: limegreen;
+      }
+
+      .rightBar {
+        background: limegreen;
+      }
+    }
+
+    .rightBar {
+      transition: 0.5s;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 100%;
+      background: #969696;
+    }
+  }
+}

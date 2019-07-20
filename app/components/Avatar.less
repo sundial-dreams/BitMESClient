@@ -1,0 +1,55 @@
+.avatar {
+  margin: 2rem auto 0 auto;
+  cursor: pointer;
+  position: relative;
+  @avatar-size: 3rem;
+  width: @avatar-size;
+  height: @avatar-size;
+  transition: all .5s ease-in-out;
+  &.large {
+    @avatar-size: 6rem;
+    width: @avatar-size;
+    height: @avatar-size;
+    margin: 15vh auto 0 auto;
+    .image {
+      width: @avatar-size;
+      height: @avatar-size;
+    }
+  }
+
+  .badge {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    line-height: 1rem;
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .05);
+  }
+
+  .image {
+    box-sizing: border-box;
+    //border: 2px solid white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.05), 0 0 5px rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    width: @avatar-size;
+    height: @avatar-size;
+    text-align: center;
+    overflow: hidden;
+
+    img {
+      display: inline-block;
+      width: 101%;
+      height: 101%;
+      outline: none;
+      border: none;
+      overflow: hidden;
+    }
+  }
+}

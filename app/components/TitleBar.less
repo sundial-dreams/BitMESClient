@@ -1,0 +1,135 @@
+@title-bar-height: 2rem;
+
+.title-bar {
+  width: 100vw;
+  height: @title-bar-height;
+  //background: #1E1E1E;
+  background: transparent;
+  display: flex;
+  position: fixed;
+  z-index: 2000;
+}
+
+.dragArea {
+  -webkit-app-region: drag;
+  flex: 1;
+  height: @title-bar-height
+}
+
+@button-size: 1rem;
+.button {
+  width: @button-size;
+  height: @button-size;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, .15);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.closedButton {
+  width: @button-size;
+  height: @button-size;
+  position: relative;
+  @bg-color: #ff1c29;
+  background: @bg-color;
+  .button;
+  &:hover {
+    div {
+      background: white;
+    }
+  }
+
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 1px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: @bg-color;
+    transition: .3s;
+  }
+
+  div:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.minimizedButton {
+  .button;
+  @bg-color: limegreen;
+  background: @bg-color;
+  position: relative;
+
+  &:hover {
+    div {
+      background: white;
+    }
+  }
+
+  div {
+    width: 60%;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: @bg-color;
+    transition: .3s;
+  }
+}
+
+.maximizeButton {
+  .button;
+  @bg-color: gold;
+  background: @bg-color;
+  position: relative;
+
+  &.maximized {
+    @bg-color: deepskyblue;
+    background: deepskyblue;
+
+    div {
+      background: @bg-color;
+    }
+
+    &:hover {
+      div {
+        background: white;
+      }
+    }
+  }
+
+  &:hover {
+    div {
+      background: white;
+    }
+  }
+
+  div {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 60%;
+    height: 1px;
+    display: inline-block;
+    background: @bg-color;
+    transform: translateX(-50%);
+    transition: .3s;
+  }
+
+  div:last-child {
+    top: 60%;
+    height: 1px;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  width: 5rem;
+  flex-basis: 5rem;
+  align-items: center;
+  justify-content: space-around;
+}

@@ -1,0 +1,68 @@
+.machineItem {
+  height: 18.2vh;
+  box-sizing: border-box;
+  border-radius: .2rem;
+  margin: .5rem;
+  padding: .5rem;
+  position: relative;
+
+  .leftBorder {
+    position: absolute;
+    height: 90%;
+    width: .2rem;
+    left: -.5rem;
+    top: .75rem;
+  }
+
+  .title {
+    h3 {
+      font-weight: bold;
+      color: gray;
+      display: inline-block;
+    }
+  }
+
+  .middle {
+    display: flex;
+    height: 65%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 2rem 0 .5rem;
+
+    .some {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .time {
+      display: flex;
+      justify-content: space-around;
+
+      & > div {
+        box-sizing: border-box;
+        padding-left: 1rem;
+
+        h3 {
+          color: gray;
+          margin: 0;
+          font-size: .9rem;
+
+          em {
+            color: gray;
+            font-style: normal;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+
+    h4 {
+      color: gray;
+      display: inline-block;
+    }
+  }
+}
